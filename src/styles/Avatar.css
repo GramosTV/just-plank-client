@@ -1,0 +1,249 @@
+.avatarContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .avatarContainer {
+    flex-direction: column;
+  }
+}
+.avatarContainer .navigator {
+  font-size: 25px;
+  transition: 0.3s;
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+@media (max-width: 992px) {
+  .avatarContainer .navigator {
+    margin-top: 10px;
+  }
+}
+.avatarContainer .navigator:hover {
+  transition: 0.3s;
+  left: 20px;
+}
+.avatarContainer .avatarForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .avatarContainer .avatarForm {
+    margin-top: 80px;
+  }
+}
+.avatarContainer .avatarForm form {
+  text-align: center;
+}
+.avatarContainer .avatarForm form div {
+  min-width: 320px;
+}
+.avatarContainer .avatarForm form input {
+  box-sizing: border-box;
+  color: #333;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  transition: all 0.3s;
+  outline: none !important;
+  border: 3px solid #75c9b7;
+  border-right: none;
+  border-radius: 6px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.avatarContainer .avatarForm form button {
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border: none;
+  background: #ffda41;
+  border: 3px solid #75c9b7;
+  border-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  cursor: pointer;
+}
+.avatarContainer .avatarForm h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.avatarContainer .avatarForm button.btn {
+  margin-top: 15px;
+  width: 87px;
+  height: 38px;
+}
+.avatarContainer .avatarForm button.btn.loading {
+  padding: 0;
+}
+.avatarContainer .avatarForm button.btn .loadingContainer .snippet .stage {
+  padding: 0;
+}
+
+div.selectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.selectContainer .select-sim {
+  line-height: 22px;
+  vertical-align: middle;
+  position: relative;
+  background: #333;
+  margin-bottom: 10px;
+  width: 612px;
+  padding-top: 60px !important;
+  border-radius: 10px;
+  max-height: 665px;
+  border: 3px solid #000;
+}
+@media (max-width: 1400px) {
+  div.selectContainer .select-sim {
+    max-height: 350px;
+  }
+}
+@media (max-width: 992px) {
+  div.selectContainer .select-sim {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 576px) {
+  div.selectContainer .select-sim {
+    width: 312px;
+  }
+}
+div.selectContainer .select-sim .heading {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: -4px;
+}
+div.selectContainer .select-sim .heading button {
+  width: 25%;
+  border: none;
+  padding: 15px 0;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #75c9b7;
+}
+div.selectContainer .select-sim .heading button.active {
+  background-color: #7ec062;
+}
+div.selectContainer .select-sim .heading button:nth-child(1) {
+  border-top-left-radius: 6px;
+}
+div.selectContainer .select-sim .heading button:nth-last-child(1) {
+  border-top-right-radius: 6px;
+}
+div.selectContainer .select-sim .options {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  min-height: 206px;
+  max-height: 665px;
+  padding-bottom: 5px;
+}
+@media (max-width: 1400px) {
+  div.selectContainer .select-sim .options {
+    max-height: 350px;
+  }
+}
+div.selectContainer .select-sim .options .option {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.selectContainer .select-sim .options .option input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 2em;
+}
+div.selectContainer .select-sim .options .option input:checked {
+  outline: 3px solid #75c9b7;
+  border-radius: 5px;
+}
+div.selectContainer .select-sim .options .option label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.selectContainer .select-sim .options .option label img {
+  margin: 0;
+}
+
+.avatar {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  background-image: url("../../public/img/avatar/bgc-min.png");
+  background-size: cover;
+}
+@media (max-width: 1400px) {
+  .avatar {
+    height: 250px;
+    width: 250px;
+  }
+}
+.avatar + button.dont {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.avatar + button.dont:hover {
+  transform: scale(1);
+}
+.avatar img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.avatar img.hat {
+  top: calc(50% - 3px);
+}
+
+.avatarContainer .select-sim {
+  padding: 5px;
+}
+
+.avatarContainer .select-sim .options .option input {
+  box-sizing: content-box;
+  padding: 5px;
+}
+
+.avatarContainer .select-sim.hat .options .option label img {
+  padding-top: 50px;
+}/*# sourceMappingURL=Avatar.css.map */

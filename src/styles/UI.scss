@@ -1,0 +1,148 @@
+@import "utilities/variables";
+* {
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+.none {
+  display: none !important;
+}
+$UI-height: 75px;
+
+.UI {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 100vh;
+  width: 200px;
+  background-color: $base-color;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  
+  @media (max-width: $laptop) {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    top: 90vh;
+    left: 0;
+  }
+  @media (max-height: $phone) {
+    height: $UI-height;
+    top: calc(100vh - 75px);
+  }
+  ul {
+    width: 100%;
+    margin: 0;
+    @media (max-width: $laptop) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 !important;
+    }
+    @media (max-height: $phone) {
+      height: $UI-height;
+    }
+    li {
+      padding: 10px 0;
+      animation-duration: 0.7s;
+      animation-fill-mode: both;
+      border-bottom: 3px solid $text-color;
+      background-color: darken($secondary-color, 5%);
+      &.active {
+        background-color: darken(#abd699, 8%);
+      }
+      @media (max-width: $laptop) {
+        height: 10vh;
+        width: 20%;
+        padding: 0;
+        border-top: 0;
+        border-bottom: 0;
+        border-right: 3px solid $text-color;
+      }
+      @media (max-height: $phone) {
+        height: $UI-height;
+      }
+      button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        height: 50px;
+        font-size: 22px;
+        font-weight: bold;
+        transition: 0.2s;
+        transform: scale(1);
+        @media (max-width: $laptop) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        @media (max-width: $phone) {
+          font-size: 18px;
+        }
+
+        &:hover {
+          transition: 0.2s;
+          transform: scale(1.12);
+          @media (max-width: $laptop) {
+            transform: scale(1.15);
+          }
+          @media (max-width: $tablet) {
+            transform: scale(1);
+          }
+        }
+        span.friendRequestsAmount {
+          position: absolute;
+          top: 0;
+          right: 15px;
+          border-radius: 50%;
+          background-color: red;
+          color: #fff;
+          box-sizing: border-box;
+          font-size: 20px;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media (max-width: $laptop) {
+            right: 18px;
+            top: 9px;
+          }
+          @media (max-width: $tablet) {
+            right: 2px;
+            top: 3px;
+          }
+        }
+        @media (max-width: $laptop) {
+          height: 10vh;
+          width: 100%;
+        }
+        @media (max-height: $phone) {
+          height: $UI-height;
+        }
+      }
+    }
+    li:nth-child(1) {
+      // border-top: 3px solid $text-color;
+      border-bottom: 3px solid $text-color;
+      @media (max-width: $laptop) {
+        border-top: 0;
+        border-bottom: 0;
+        border-left: 0px solid $text-color;
+        border-right: 3px solid $text-color;
+      }
+    }
+    li:nth-last-child(1) {
+      @media (max-width: $laptop) {
+        border-left: 0px solid $text-color;
+        border-right: 0px solid $text-color;
+      }
+    }
+  }
+}

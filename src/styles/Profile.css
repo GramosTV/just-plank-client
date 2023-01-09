@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap");
+@media (max-width: 992px) {
+  .animationDisabledForMobile {
+    -webkit-animation: none !important;
+            animation: none !important;
+  }
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px;
+}
+@media (max-width: 992px) {
+  .profile {
+    border-radius: 0;
+    flex-direction: column;
+    height: auto;
+  }
+}
+.profile div.message {
+  width: 100%;
+}
+.profile div.message div {
+  width: 100%;
+  text-align: center;
+}
+.profile div.message div button {
+  margin: 0 15px;
+}
+.profile div.message p {
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+}
+@media (max-width: 992px) {
+  .profile div.message p {
+    margin-top: 80px;
+  }
+}
+.profile .user {
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 100%;
+  width: 30%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+.profile .user .avatar {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 240px !important;
+  height: 240px !important;
+}
+@media (max-width: 1500px) {
+  .profile .user p {
+    margin: 5px 0;
+  }
+  .profile .user h3 {
+    margin: 10px 0;
+  }
+}
+.profile .user .edit {
+  position: absolute;
+  top: 75px;
+  left: 80%;
+  cursor: pointer;
+  z-index: 5;
+}
+@media (max-width: 1500px) {
+  .profile .user .edit {
+    left: 94%;
+  }
+}
+@media (max-width: 1300px) {
+  .profile .user .edit {
+    left: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .profile .user .edit {
+    left: 65%;
+  }
+}
+@media (max-width: 576px) {
+  .profile .user .edit {
+    left: 75%;
+  }
+}
+.profile .user .edit svg {
+  font-size: 30px;
+}
+.profile .user div.avatar {
+  width: 100%;
+}
+.profile .user div.avatar img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile .user .loginRegister {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+.profile .user .loginRegister button {
+  margin-right: 15px;
+}
+@media (max-width: 992px) {
+  .profile .user .loginRegister {
+    margin: 30px auto 30px auto;
+    justify-content: space-around;
+    max-width: 465px;
+  }
+  .profile .user .loginRegister button {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 992px) {
+  .profile .user {
+    border-radius: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+.profile .user h2 {
+  text-align: center;
+  margin: 0px;
+}
+.profile .user h2.dayStreakH2Margin {
+  margin-top: 25px;
+}
+.profile .stats {
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.profile .stats div.profileStatus {
+  min-height: 75px;
+  min-width: 350px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+@media (max-width: 992px) {
+  .profile .stats div.profileStatus {
+    z-index: auto;
+  }
+}
+@media (max-width: 355px) {
+  .profile .stats div.profileStatus {
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .profile .stats div.profileStatus {
+    position: static;
+  }
+}
+.profile .stats div.profileStatus span {
+  margin-left: 15px;
+  font-size: 30px;
+  width: 93px;
+  text-align: center;
+}
+.profile .stats div.profileStatus svg {
+  font-size: 45px;
+  margin-left: 15px;
+}
+.profile .stats div.profileStatus label {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.profile .stats div.profileStatus label svg {
+  font-size: 23px;
+  margin-left: 0;
+  z-index: -1;
+}
+.profile .stats div.profileStatus label svg path {
+  color: #000;
+}
+.profile .stats div.profileStatus div.frameContainer .frame {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  display: inline-block;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #cc0000;
+}
+.profile .stats div.profileStatus div.frameContainer .frame:nth-child(2) {
+  border-radius: 0px;
+}
+.profile .stats div.profileStatus div.frameContainer .frame:nth-child(1) {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.profile .stats div.profileStatus div.frameContainer .frame:nth-child(2) {
+  background-color: #1d44b8;
+}
+.profile .stats div.profileStatus div.frameContainer .frame:nth-child(3) {
+  background-color: green;
+}
+.profile .stats div.profileStatus div.frameContainer .frame .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile .stats div.profileStatus div.frameContainer .frame .center .checkbox {
+  width: 45px;
+  height: 45px;
+}
+.profile .stats div.profileStatus div.frameContainer .frame .center .checkbox .check {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 0.1px;
+  height: 0.1px;
+}
+.profile .stats div.profileStatus div.frameContainer .frame .center .checkbox .check + label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: inset 1px 2px 7px 2px rgba(0, 0, 0, 0.4), 4px 4px 4px 0px rgba(51, 51, 51, 0.2);
+  transition: all 0.7s ease;
+}
+.profile .stats div.profileStatus div.frameContainer .frame .center .checkbox .check:checked + label {
+  border-width: 14px;
+  box-shadow: 4px 4px 4px 0px rgba(51, 51, 51, 0.4);
+  background: yellowgreen;
+  -webkit-animation: jelly 0.5s ease-in-out;
+          animation: jelly 0.5s ease-in-out;
+}
+.profile .stats div.profileStatus div.frameContainer .frame .center .checkbox .check:checked + label svg {
+  display: none;
+}
+@-webkit-keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@media (max-width: 992px) {
+  .profile .stats {
+    border-radius: 0;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+}
+.profile .stats .block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+}
+@media (max-width: 992px) {
+  .profile .stats .block {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 30px 0;
+  }
+}
+.profile .stats .block strong {
+  font-size: 30px;
+}
+@media (max-width: 1200px) {
+  .profile .stats .block strong {
+    font-size: 25px;
+  }
+}
+.profile .stats .block p {
+  font-size: 24px;
+}
+@media (max-width: 1200px) {
+  .profile .stats .block p {
+    font-size: 22px;
+  }
+}
+.profile .fire {
+  height: 200px;
+  width: 100%;
+  padding-top: 65px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1500px) {
+  .profile .fire {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .profile .fire {
+    padding-top: 65px;
+  }
+}
+.profile .fire .flames {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+.profile .fire .flames div.dayStreak {
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  color: black;
+  position: absolute;
+  font-size: 40px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-family: "Bebas Neue";
+}
+.profile .fire .flames .flame {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 0%;
+  height: 0%;
+  background-color: #FFDC01;
+  border-radius: 1vw;
+}
+.profile .fire .flames .flame:nth-child(2n+1) {
+  -webkit-animation: flameodd 2s ease-in infinite;
+          animation: flameodd 2s ease-in infinite;
+}
+.profile .fire .flames .flame:nth-child(2n) {
+  -webkit-animation: flameeven 2s ease-in infinite;
+          animation: flameeven 2s ease-in infinite;
+}
+.profile .fire .flames .flame:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.profile .fire .flames .flame:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.profile .fire .flames .flame:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.profile .fire .flames .flame:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+@-webkit-keyframes flameodd {
+  0%, 100% {
+    width: 0%;
+    height: 0%;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+  }
+  0% {
+    background-color: #FFDC01;
+    z-index: 2;
+  }
+  40% {
+    background-color: #FDAC01;
+    z-index: 2;
+  }
+  100% {
+    background-color: #F73B01;
+    z-index: -10;
+  }
+  0% {
+    right: 0%;
+    bottom: 0%;
+  }
+  25% {
+    right: 1%;
+    bottom: 2%;
+  }
+  100% {
+    right: 150%;
+    bottom: 170%;
+  }
+}
+@keyframes flameodd {
+  0%, 100% {
+    width: 0%;
+    height: 0%;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+  }
+  0% {
+    background-color: #FFDC01;
+    z-index: 2;
+  }
+  40% {
+    background-color: #FDAC01;
+    z-index: 2;
+  }
+  100% {
+    background-color: #F73B01;
+    z-index: -10;
+  }
+  0% {
+    right: 0%;
+    bottom: 0%;
+  }
+  25% {
+    right: 1%;
+    bottom: 2%;
+  }
+  100% {
+    right: 150%;
+    bottom: 170%;
+  }
+}
+@-webkit-keyframes flameeven {
+  0%, 100% {
+    width: 0%;
+    height: 0%;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+  }
+  0% {
+    background-color: #FFDC01;
+    z-index: 2;
+  }
+  40% {
+    background-color: #FDAC01;
+    z-index: 2;
+  }
+  100% {
+    background-color: #F73B01;
+    z-index: -10;
+  }
+  0% {
+    right: 0%;
+    bottom: 0%;
+  }
+  25% {
+    right: 2%;
+    bottom: 1%;
+  }
+  100% {
+    right: 170%;
+    bottom: 150%;
+  }
+}
+@keyframes flameeven {
+  0%, 100% {
+    width: 0%;
+    height: 0%;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+  }
+  0% {
+    background-color: #FFDC01;
+    z-index: 2;
+  }
+  40% {
+    background-color: #FDAC01;
+    z-index: 2;
+  }
+  100% {
+    background-color: #F73B01;
+    z-index: -10;
+  }
+  0% {
+    right: 0%;
+    bottom: 0%;
+  }
+  25% {
+    right: 2%;
+    bottom: 1%;
+  }
+  100% {
+    right: 170%;
+    bottom: 150%;
+  }
+}/*# sourceMappingURL=Profile.css.map */

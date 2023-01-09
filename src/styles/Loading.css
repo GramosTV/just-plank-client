@@ -1,0 +1,209 @@
+#root {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+div.loadingContainer {
+  display: flex !important;
+}
+
+@media (max-width: 992px) {
+  .MainBox div.loadingContainer:nth-child(1) {
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .MainBox .fill .loadingContainer {
+    height: 90vh;
+  }
+}
+
+.Main.userProfile .MainBox .navigator {
+  font-size: 25px;
+  transition: 0.3s;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+@media (max-width: 992px) {
+  .Main.userProfile .MainBox .navigator {
+    margin-top: 10px;
+  }
+}
+.Main.userProfile .MainBox .navigator:hover {
+  transition: 0.3s;
+  left: 30px;
+}
+@media (min-width: 992px) {
+  .Main.userProfile .MainBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.Main.userProfile .MainBox.notCenter div.profile div.user {
+  padding-top: 40px;
+}
+@media (min-width: 992px) {
+  .Main.userProfile .MainBox.notCenter {
+    position: static;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
+@media (max-width: 992px) {
+  .Main.userProfile .MainBox {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .MainBox .duelTimerContainer .loadingContainer {
+    height: 30px;
+  }
+}
+
+.loadingContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 15px 0;
+  margin: 0 -5%;
+  overflow: hidden;
+  text-align: left;
+  width: 50px;
+  height: 30px;
+}
+
+.snippet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #75c9b7;
+  color: #75c9b7;
+  box-shadow: 9999px 0 0 -5px #75c9b7;
+  -webkit-animation: dotPulse 1.5s infinite linear;
+          animation: dotPulse 1.5s infinite linear;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.dot-pulse::before, .dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #75c9b7;
+  color: #75c9b7;
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px #75c9b7;
+  -webkit-animation: dotPulseBefore 1.5s infinite linear;
+          animation: dotPulseBefore 1.5s infinite linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px #75c9b7;
+  -webkit-animation: dotPulseAfter 1.5s infinite linear;
+          animation: dotPulseAfter 1.5s infinite linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px #75c9b7;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px #75c9b7;
+  }
+  60%, 100% {
+    box-shadow: 9984px 0 0 -5px #75c9b7;
+  }
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px #75c9b7;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px #75c9b7;
+  }
+  60%, 100% {
+    box-shadow: 9984px 0 0 -5px #75c9b7;
+  }
+}
+@-webkit-keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px #75c9b7;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px #75c9b7;
+  }
+  60%, 100% {
+    box-shadow: 9999px 0 0 -5px #75c9b7;
+  }
+}
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px #75c9b7;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px #75c9b7;
+  }
+  60%, 100% {
+    box-shadow: 9999px 0 0 -5px #75c9b7;
+  }
+}
+@-webkit-keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px #75c9b7;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #75c9b7;
+  }
+  60%, 100% {
+    box-shadow: 10014px 0 0 -5px #75c9b7;
+  }
+}
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px #75c9b7;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #75c9b7;
+  }
+  60%, 100% {
+    box-shadow: 10014px 0 0 -5px #75c9b7;
+  }
+}/*# sourceMappingURL=Loading.css.map */

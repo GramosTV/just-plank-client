@@ -1,0 +1,16 @@
+.btn {
+  color: #111;
+  border: #75c9b7 3px solid;
+  border-radius: 10px;
+  background-color: #c7ddcc;
+  padding: 5px 12px;
+  transition: 0.2s;
+  transform: scale(1);
+  font-size: 18px;
+  font-weight: bold;
+}
+.btn:hover {
+  transition: 0.2s;
+  transform: scale(1.05);
+  cursor: pointer;
+}/*# sourceMappingURL=Button.css.map */

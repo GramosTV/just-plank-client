@@ -1,0 +1,35 @@
+.MainBox {
+  height: 90vh;
+  width: 75%;
+  background-color: #ffe26a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+}
+@media (max-width: 1500px) {
+  .MainBox {
+    height: 95vh;
+  }
+}
+@media (max-width: 992px) {
+  .MainBox {
+    width: 100%;
+    border-radius: 0;
+    min-height: 90vh;
+    height: auto;
+    padding-bottom: 10vh;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .MainBox.userProfile {
+    min-height: 100vh;
+  }
+}
+@media (max-height: 576px) {
+  .MainBox {
+    padding-bottom: calc(10vh + 75px);
+  }
+}/*# sourceMappingURL=MainBox.css.map */

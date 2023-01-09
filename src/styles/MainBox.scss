@@ -1,0 +1,32 @@
+@import "utilities/variables";
+
+.MainBox {
+    height: 90vh;
+    width: 75%;
+    background-color: $base-color;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+    @media (max-width: 1500px) {
+        height: 95vh;
+    }
+    @media (max-width: $laptop) {
+        width: 100%;
+        border-radius: 0;
+        min-height: 90vh;
+        height: auto;
+        padding-bottom: 10vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        &.userProfile {
+            // padding-bottom: 0;
+            min-height: 100vh;
+        }
+    }
+    @media (max-height: $phone) {
+        padding-bottom: calc(10vh + 75px);
+      }
+}

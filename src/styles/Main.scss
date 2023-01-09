@@ -1,0 +1,19 @@
+@import "utilities/variables";
+$box-padding: 75px;
+.Main {
+    margin: 0 auto;
+    height: 100vh;
+    width: calc(100vw - 75px);
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: $box-padding;
+    @media (max-width: $laptop) {
+        width: 100vw;
+        padding-left: 0;
+        height: auto;
+        min-height: 80vh;
+        justify-content: flex-start;
+    }
+}

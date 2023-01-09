@@ -1,0 +1,163 @@
+@import "utilities/variables";
+#root {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+div.loadingContainer {
+  display: flex !important;
+}
+.MainBox div.loadingContainer:nth-child(1) {
+  @media (max-width: $laptop) {
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.MainBox .fill .loadingContainer {
+  @media (max-width: $laptop) {
+    height: 90vh;
+  }
+}
+.Main.userProfile .MainBox {
+  .navigator {
+    font-size: 25px;
+    transition: 0.3s;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10;
+    @media (max-width: $laptop) {
+      margin-top: 10px;
+    }
+    &:hover {
+      transition: 0.3s;
+      left: 30px;
+    }
+  }
+  @media (min-width: $laptop) {
+  position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  &.notCenter {
+    div.profile div.user {
+      padding-top: 40px;
+    }
+    @media (min-width: $laptop) {
+      position: static;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+  }
+  @media (max-width: $laptop) {
+    min-height: 100vh;
+  }
+}
+.MainBox .duelTimerContainer .loadingContainer {
+  @media (max-width: $laptop) {
+    height: 30px;
+  }
+}
+.loadingContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px 0;
+    margin: 0 -5%;
+    overflow: hidden;
+    text-align: left;
+    width: 50px;
+    height: 30px;
+  }
+  .snippet {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.dot-pulse {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    color: $secondary-color;
+    box-shadow: 9999px 0 0 -5px $secondary-color;
+    animation: dotPulse 1.5s infinite linear;
+    animation-delay: .25s;
+  }
+  
+  .dot-pulse::before, .dot-pulse::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    color: $secondary-color;
+  }
+  
+  .dot-pulse::before {
+    box-shadow: 9984px 0 0 -5px $secondary-color;
+    animation: dotPulseBefore 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+  
+  .dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px $secondary-color;
+    animation: dotPulseAfter 1.5s infinite linear;
+    animation-delay: .5s;
+  }
+  
+  @keyframes dotPulseBefore {
+    0% {
+      box-shadow: 9984px 0 0 -5px $secondary-color;
+    }
+    30% {
+      box-shadow: 9984px 0 0 2px $secondary-color;
+    }
+    60%,
+    100% {
+      box-shadow: 9984px 0 0 -5px $secondary-color;
+    }
+  }
+  
+  @keyframes dotPulse {
+    0% {
+      box-shadow: 9999px 0 0 -5px $secondary-color;
+    }
+    30% {
+      box-shadow: 9999px 0 0 2px $secondary-color;
+    }
+    60%,
+    100% {
+      box-shadow: 9999px 0 0 -5px $secondary-color;
+    }
+  }
+  
+  @keyframes dotPulseAfter {
+    0% {
+      box-shadow: 10014px 0 0 -5px $secondary-color;
+    }
+    30% {
+      box-shadow: 10014px 0 0 2px $secondary-color;
+    }
+    60%,
+    100% {
+      box-shadow: 10014px 0 0 -5px $secondary-color;
+    }
+  }
+  

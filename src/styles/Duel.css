@@ -1,0 +1,456 @@
+.alwaysVisible {
+  display: block !important;
+}
+
+.exitDuel {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.duelStarterContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    height: auto;
+  }
+}
+.duelStarterContainer .duelsList {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.duelStarterContainer .duelsList .animate__slideInUp {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .duelsList {
+    width: 80%;
+    padding: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .duelStarterContainer .duelsList {
+    width: 95%;
+  }
+}
+.duelStarterContainer .duelsList h2 {
+  font-size: 35px;
+  margin: 15px 0;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .duelsList h2 {
+    margin-top: 70px;
+  }
+}
+.duelStarterContainer .duelsList ul {
+  overflow: hidden;
+  overflow-y: auto;
+  width: 98%;
+  margin: 0;
+}
+.duelStarterContainer .duelsList .duelListElement {
+  margin: 10px 0;
+  border-radius: 10px;
+  color: black;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #75c9b7;
+  border: 2px solid #1B1212;
+}
+@media (min-width: 993px) {
+  .duelStarterContainer .duelsList .duelListElement {
+    margin-right: 5px;
+  }
+}
+.duelStarterContainer .duelsList .duelListElement.pending {
+  background-color: #ffe26a;
+  border: 3px solid #75c9b7;
+  text-align: center;
+}
+.duelStarterContainer .duelsList .duelListElement.pending span {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.duelStarterContainer .duelsList .duelListElement.pending .loadingContainer {
+  margin: 0;
+}
+.duelStarterContainer .duelsList .duelListElement.pending .loadingContainer .snippet {
+  margin: 0;
+}
+.duelStarterContainer .duelsList .duelListElement.pending:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+}
+.duelStarterContainer .duelsList .duelListElement.pending .loadingContainer .snippet .stage {
+  height: 20px;
+}
+.duelStarterContainer .duelsList .duelListElement div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .duelsList .duelListElement div {
+    flex-direction: column;
+  }
+}
+.duelStarterContainer .duelsList .duelListElement div p {
+  color: #cc0000;
+  width: 36%;
+}
+.duelStarterContainer .duelsList .duelListElement div p:nth-child(2) {
+  color: #1d44b8;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .duelsList .duelListElement div p {
+    width: 98%;
+  }
+}
+.duelStarterContainer .duelsList .duelListElement div p.royalblue {
+  color: #1d44b8;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.duelStarterContainer .duelsList .duelListElement div p.red {
+  color: #cc0000;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.duelStarterContainer .duelsList .duelListElement div strong {
+  font-size: 22px;
+  width: 28%;
+}
+.duelStarterContainer .duelsList .duelListElement div strong.Victory {
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #1d44b8;
+  color: #fff;
+}
+.duelStarterContainer .duelsList .duelListElement div strong.Defeat {
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #cc0000;
+  color: #fff;
+}
+.duelStarterContainer .duelsList .duelListElement div strong.mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .duelsList .duelListElement div strong.mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .duelStarterContainer .duelsList .duelListElement div strong.royalblue {
+    color: #1d44b8;
+  }
+  .duelStarterContainer .duelsList .duelListElement div strong.red {
+    color: #cc0000;
+  }
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .duelsList .duelListElement div:nth-child(2) {
+    display: none;
+  }
+}
+.duelStarterContainer .hostAndJoin {
+  height: 100%;
+  width: 50%;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .hostAndJoin {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  .duelStarterContainer .hostAndJoin {
+    width: 98%;
+  }
+}
+.duelStarterContainer .hostAndJoin .host {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .hostAndJoin .host {
+    margin-top: 40px;
+  }
+}
+.duelStarterContainer .hostAndJoin .host button {
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.duelStarterContainer .hostAndJoin .join {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .duelStarterContainer .hostAndJoin .join {
+    margin-top: 60px;
+  }
+}
+.duelStarterContainer .hostAndJoin .join form {
+  text-align: center;
+}
+.duelStarterContainer .hostAndJoin .join form input {
+  box-sizing: border-box;
+  color: #333;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  transition: all 0.3s;
+  outline: none !important;
+  border: 3px solid #75c9b7;
+  border-right: none;
+  border-radius: 6px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.duelStarterContainer .hostAndJoin .join form button {
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border: none;
+  border: 3px solid #75c9b7;
+  border-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  cursor: pointer;
+  background: #ffda41;
+}
+.duelStarterContainer .hostAndJoin .join h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.duelContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .duelContainer {
+    margin-top: 12vh;
+  }
+}
+.duelContainer button.duel {
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  width: 150px;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 25px;
+}
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.duelContainer button.duel::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -75%;
+  top: -75%;
+  width: 250%;
+  height: 250%;
+  background-color: #1d44b8;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#1d44b8, #1d44b8), linear-gradient(#1d44b8, #1d44b8), linear-gradient(#cc0000, #cc0000), linear-gradient(#cc0000, #cc0000);
+  -webkit-animation: rotate 4s linear infinite;
+          animation: rotate 4s linear infinite;
+}
+.duelContainer button.duel::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px;
+}
+
+#my-canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.timeH2 {
+  font-size: 70px !important;
+  text-align: center;
+  width: 100%;
+}
+
+.duelTimerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 36px;
+}
+@media (max-width: 992px) {
+  .duelTimerContainer {
+    height: 90vh;
+  }
+}
+.duelTimerContainer h2 {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+@media (max-width: 992px) {
+  .duelTimerContainer h2 {
+    font-size: 30px;
+  }
+}
+.duelTimerContainer h2.Victory {
+  color: #1d44b8;
+  font-size: 50px;
+}
+.duelTimerContainer h2.Defeat {
+  color: #cc0000;
+  font-size: 50px;
+}
+.duelTimerContainer button {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.duelTimerContainer strong {
+  cursor: pointer;
+  z-index: 1000;
+  margin-top: 35px;
+}
+
+.playerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .playerContainer {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+.playerContainer .player:nth-child(1) span {
+  border-color: #1d44b8;
+}
+.playerContainer .player {
+  width: 350px;
+  text-align: center;
+}
+.playerContainer .player p {
+  font-size: 18px;
+}
+@media (max-width: 992px) {
+  .playerContainer .player {
+    width: auto;
+  }
+}
+.playerContainer .player span {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 10px;
+  border: #cc0000 3px solid;
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: "ubuntu";
+  font-style: italic;
+  font-weight: 300;
+  src: local("Lato Light Italic"), local("Lato-LightItalic"), url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2) format("woff2");
+}
+.vsWrapper {
+  text-align: center;
+}
+.vsWrapper h3 {
+  color: #fff;
+  font-size: 92px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(to right, #000 10%, #414141 50%, #555555 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 1.5s linear infinite;
+          animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+@media (max-width: 992px) {
+  .vsWrapper h3 {
+    margin: 20px 0;
+  }
+}
+
+@-webkit-keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}/*# sourceMappingURL=Duel.css.map */

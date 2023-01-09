@@ -1,0 +1,177 @@
+* {
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.none {
+  display: none !important;
+}
+
+.UI {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 100vh;
+  width: 200px;
+  background-color: #ffe26a;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .UI {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    top: 90vh;
+    left: 0;
+  }
+}
+@media (max-height: 576px) {
+  .UI {
+    height: 75px;
+    top: calc(100vh - 75px);
+  }
+}
+.UI ul {
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .UI ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+@media (max-height: 576px) {
+  .UI ul {
+    height: 75px;
+  }
+}
+.UI ul li {
+  padding: 10px 0;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  border-bottom: 3px solid #1B1212;
+  background-color: #63c2ad;
+}
+.UI ul li.active {
+  background-color: #93ca7c;
+}
+@media (max-width: 992px) {
+  .UI ul li {
+    height: 10vh;
+    width: 20%;
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 3px solid #1B1212;
+  }
+}
+@media (max-height: 576px) {
+  .UI ul li {
+    height: 75px;
+  }
+}
+.UI ul li button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  transition: 0.2s;
+  transform: scale(1);
+}
+@media (max-width: 992px) {
+  .UI ul li button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .UI ul li button {
+    font-size: 18px;
+  }
+}
+.UI ul li button:hover {
+  transition: 0.2s;
+  transform: scale(1.12);
+}
+@media (max-width: 992px) {
+  .UI ul li button:hover {
+    transform: scale(1.15);
+  }
+}
+@media (max-width: 768px) {
+  .UI ul li button:hover {
+    transform: scale(1);
+  }
+}
+.UI ul li button span.friendRequestsAmount {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .UI ul li button span.friendRequestsAmount {
+    right: 18px;
+    top: 9px;
+  }
+}
+@media (max-width: 768px) {
+  .UI ul li button span.friendRequestsAmount {
+    right: 2px;
+    top: 3px;
+  }
+}
+@media (max-width: 992px) {
+  .UI ul li button {
+    height: 10vh;
+    width: 100%;
+  }
+}
+@media (max-height: 576px) {
+  .UI ul li button {
+    height: 75px;
+  }
+}
+.UI ul li:nth-child(1) {
+  border-bottom: 3px solid #1B1212;
+}
+@media (max-width: 992px) {
+  .UI ul li:nth-child(1) {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0px solid #1B1212;
+    border-right: 3px solid #1B1212;
+  }
+}
+@media (max-width: 992px) {
+  .UI ul li:nth-last-child(1) {
+    border-left: 0px solid #1B1212;
+    border-right: 0px solid #1B1212;
+  }
+}/*# sourceMappingURL=UI.css.map */

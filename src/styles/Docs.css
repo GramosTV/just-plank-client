@@ -1,0 +1,66 @@
+div#docs {
+  box-sizing: border-box;
+  padding: 0 12px;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #ffe26a;
+}
+div#docs div {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  div#docs div {
+    padding: 0;
+  }
+}
+div#docs div div {
+  width: 33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+div#docs div div strong {
+  font-size: 25px;
+  transition: 0.3s;
+  transform: translateX(0px);
+}
+@media (max-width: 576px) {
+  div#docs div div strong {
+    font-size: 20px;
+  }
+}
+div#docs div div strong:hover {
+  transition: 0.3s;
+  transform: translateX(-10px);
+}
+div#docs div div:nth-child(2) {
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  div#docs div div:nth-child(2) {
+    margin-top: 12px;
+  }
+}
+div#docs div div:nth-child(2) strong {
+  display: flex;
+  flex-direction: column;
+}
+div#docs div div:nth-child(2) strong:hover {
+  transition: 0.3s;
+  transform: translateY(-8px);
+}
+div#docs div div:nth-child(3) {
+  justify-content: flex-end;
+}
+div#docs div div:nth-child(3) strong:hover {
+  transition: 0.3s;
+  transform: translateX(10px);
+}/*# sourceMappingURL=Docs.css.map */
